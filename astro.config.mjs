@@ -1,13 +1,14 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
 import tailwindcss from '@tailwindcss/vite';
+import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  // site: "thea11ypath.com",
+  site: "thea11ysite.com",
   vite: {
     plugins: [tailwindcss()]
   },
 
+  integrations: [sitemap()],
 });
